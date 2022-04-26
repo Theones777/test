@@ -1,0 +1,6 @@
+def add_on_background(path_to_background, path_to_object, indent_x=0, indent_y=150):
+    backgr = Image.open(path_to_background)
+    obj = Image.open(path_to_object)
+    out_im = backgr.copy()
+    out_im.paste(obj, (indent_x, indent_y))
+    return out_im
